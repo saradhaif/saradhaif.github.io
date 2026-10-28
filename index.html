@@ -1,0 +1,1662 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#F6F3EC">
+
+  <title>Sara Abdulla | Data Science & Business Analytics</title>
+  <meta name="description" content="Sara Abdulla's portfolio in data science, business analytics, machine learning, and data-driven problem solving.">
+  <meta property="og:title" content="Sara Abdulla | Data Science & Business Analytics">
+  <meta property="og:description" content="Exploring data, building models, and turning analysis into business insight.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --paper: #F6F3EC;
+      --ink: #202D29;
+      --sage: #A3B6A1;
+      --terracotta: #C16E4B;
+      --stone: #DCD7CB;
+      --white: #FFFFFF;
+      --muted: #555F58;
+      --line: #D5D0C5;
+      --serif: "DM Serif Display", Georgia, serif;
+      --sans: "DM Sans", Arial, sans-serif;
+      --mono: "IBM Plex Mono", monospace;
+      --page-width: 1160px;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body, button, a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    a {
+      color: inherit;
+      text-underline-offset: 5px;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--terracotta);
+      outline-offset: 5px;
+      border-radius: 3px;
+    }
+
+    button,
+    a {
+      touch-action: manipulation;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(var(--page-width), calc(100% - 64px));
+      margin-inline: auto;
+    }
+
+    .mono {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.035em;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: 25px;
+      height: 1px;
+      background: var(--terracotta);
+      content: "";
+    }
+
+    .section {
+      padding-block: 108px;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: minmax(180px, 0.7fr) 1.3fr;
+      gap: 50px;
+      align-items: start;
+      margin-bottom: 55px;
+    }
+
+    h1, h2, h3, p {
+      margin-top: 0;
+    }
+
+    h1, h2, h3 {
+      font-weight: 400;
+    }
+
+    h2 {
+      margin-bottom: 0;
+      font-family: var(--serif);
+      font-size: clamp(36px, 4.5vw, 58px);
+      line-height: 1.12;
+      letter-spacing: -0.035em;
+    }
+
+    .section-intro {
+      max-width: 600px;
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.85;
+    }
+
+    /* Navigation */
+
+    .site-header {
+      position: sticky;
+      z-index: 20;
+      top: 0;
+      background: rgba(246, 243, 236, 0.96);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav {
+      display: flex;
+      min-height: 76px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .wordmark {
+      flex-shrink: 0;
+      font-family: var(--serif);
+      font-size: 25px;
+      text-decoration: none;
+      letter-spacing: -0.04em;
+    }
+
+    .wordmark span {
+      color: var(--terracotta);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: clamp(15px, 2.6vw, 34px);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 14px;
+      text-decoration: none;
+      transition: color 180ms ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--terracotta);
+    }
+
+    .nav-links .contact-link {
+      padding: 10px 16px;
+      border: 1px solid var(--ink);
+      color: var(--ink);
+    }
+
+    .nav-links .contact-link:hover {
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    /* Hero */
+
+    .hero {
+      display: grid;
+      min-height: 670px;
+      grid-template-columns: minmax(0, 1.35fr) minmax(270px, 0.65fr);
+      gap: 60px;
+      align-items: center;
+      padding-block: 90px 100px;
+    }
+
+    .hero-kicker {
+      margin-bottom: 25px;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.055em;
+      text-transform: uppercase;
+    }
+
+    .availability {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 27px;
+      padding: 7px 11px;
+      border: 1px solid var(--line);
+      border-radius: 2px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .availability::before {
+      width: 7px;
+      height: 7px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      background: var(--sage);
+      content: "";
+    }
+
+    .hero h1 {
+      max-width: 760px;
+      margin-bottom: 24px;
+      font-family: var(--serif);
+      font-size: clamp(54px, 7.1vw, 94px);
+      line-height: 0.99;
+      letter-spacing: -0.055em;
+    }
+
+    .hero h1 .accent {
+      color: var(--terracotta);
+      font-style: italic;
+    }
+
+    .hero-description {
+      max-width: 540px;
+      margin-bottom: 32px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 50px;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      padding: 12px 20px;
+      border: 1px solid var(--ink);
+      background: var(--ink);
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 180ms ease, color 180ms ease,
+                  transform 180ms ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      background: var(--terracotta);
+      border-color: var(--terracotta);
+      color: var(--white);
+    }
+
+    .button .arrow {
+      font-size: 19px;
+      line-height: 1;
+    }
+
+    .hero-note {
+      margin-top: 26px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* The SQL signature */
+
+    .query-panel {
+      position: relative;
+      overflow: hidden;
+      align-self: center;
+      border: 1px solid #35453D;
+      background: var(--ink);
+      color: #F6F3EC;
+      box-shadow: 9px 9px 0 var(--stone);
+    }
+
+    .query-panel::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 5px;
+      height: 100%;
+      background: var(--terracotta);
+      content: "";
+    }
+
+    .query-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 15px 20px;
+      border-bottom: 1px solid #46534D;
+      color: #D6DED5;
+      font-family: var(--mono);
+      font-size: 11px;
+    }
+
+    .query-dots {
+      display: flex;
+      gap: 5px;
+    }
+
+    .query-dots span {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--sage);
+    }
+
+    .query-dots span:nth-child(2) {
+      background: #D8B77C;
+    }
+
+    .query-dots span:nth-child(3) {
+      background: var(--terracotta);
+    }
+
+    .query-code {
+      padding: 25px 20px 28px;
+      font-family: var(--mono);
+      font-size: 13px;
+      line-height: 2.1;
+      overflow-wrap: anywhere;
+    }
+
+    .query-code .indent {
+      padding-left: 19px;
+    }
+
+    .query-code .keyword {
+      color: #D8B77C;
+    }
+
+    .query-code .field {
+      color: #B8CEB5;
+    }
+
+    .query-code .value {
+      color: #E3A184;
+    }
+
+    .query-code .comment {
+      color: #C4CCC4;
+    }
+
+    .query-result {
+      margin: 0 20px 20px;
+      padding: 12px 13px;
+      border-left: 2px solid var(--sage);
+      background: #2A3932;
+      color: #E0E8DD;
+      font-size: 13px;
+    }
+
+    .query-result strong {
+      display: block;
+      margin-bottom: 2px;
+      color: #C7D8C2;
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+    /* About */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.7fr 1.3fr;
+      gap: 50px;
+    }
+
+    .about-copy {
+      max-width: 710px;
+    }
+
+    .about-copy p {
+      margin-bottom: 22px;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.9;
+    }
+
+    .about-copy p:first-child {
+      color: var(--ink);
+      font-size: 22px;
+      line-height: 1.65;
+    }
+
+    .about-note {
+      display: flex;
+      align-items: flex-start;
+      gap: 17px;
+      margin-top: 32px;
+      padding-top: 23px;
+      border-top: 1px solid var(--line);
+    }
+
+    .about-note-mark {
+      width: 34px;
+      height: 34px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--terracotta);
+      color: var(--terracotta);
+      font-family: var(--serif);
+      font-size: 23px;
+    }
+
+    .about-note p {
+      margin: 0;
+      font-size: 15px;
+    }
+
+    /* Experience */
+
+    .experience-row {
+      display: grid;
+      grid-template-columns: 0.7fr 1.3fr;
+      gap: 50px;
+      padding-block: 32px;
+      border-top: 1px solid var(--line);
+    }
+
+    .experience-meta {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .experience-meta .mono {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--terracotta);
+    }
+
+    .experience-content h3 {
+      margin-bottom: 10px;
+      font-family: var(--serif);
+      font-size: 29px;
+      line-height: 1.3;
+    }
+
+    .experience-content p {
+      max-width: 690px;
+      margin-bottom: 15px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .experience-focus {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 19px;
+    }
+
+    .experience-focus span {
+      padding: 5px 9px;
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* Skills */
+
+    .skills-layout {
+      display: grid;
+      grid-template-columns: 0.7fr 1.3fr;
+      gap: 50px;
+    }
+
+    .skills-groups {
+      border-top: 1px solid var(--line);
+    }
+
+    .skill-group {
+      display: grid;
+      grid-template-columns: minmax(145px, 0.65fr) 1.35fr;
+      gap: 24px;
+      padding-block: 24px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .skill-group h3 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: 22px;
+    }
+
+    .skill-group p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.9;
+    }
+
+    /* Projects */
+
+    .projects-list {
+      border-top: 1px solid var(--line);
+    }
+
+    .project {
+      display: grid;
+      grid-template-columns: minmax(220px, 0.78fr) minmax(0, 1.22fr);
+      gap: 48px;
+      padding-block: 39px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .project:nth-child(even) {
+      grid-template-columns: minmax(220px, 0.78fr) minmax(0, 1.22fr);
+    }
+
+    .project-aside {
+      align-self: start;
+    }
+
+    .project-type {
+      display: inline-block;
+      margin-bottom: 18px;
+      color: var(--terracotta);
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.055em;
+      text-transform: uppercase;
+    }
+
+    .project h3 {
+      margin-bottom: 13px;
+      font-family: var(--serif);
+      font-size: clamp(28px, 3vw, 37px);
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+    }
+
+    .project-summary {
+      max-width: 420px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .project-details {
+      align-self: center;
+    }
+
+    .project-details p {
+      margin-bottom: 18px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.85;
+    }
+
+    .project-details p:last-of-type {
+      margin-bottom: 21px;
+    }
+
+    .tool-label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--ink);
+      font-family: var(--mono);
+      font-size: 11px;
+      text-transform: uppercase;
+    }
+
+    .tool-list {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .project-visual {
+      display: grid;
+      min-height: 100px;
+      align-items: center;
+      margin-bottom: 22px;
+      padding: 17px;
+      border: 1px solid var(--line);
+      background: #EEEAE0;
+    }
+
+    .visual-label {
+      margin-bottom: 13px;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .visual-bars {
+      display: flex;
+      height: 45px;
+      align-items: end;
+      gap: 7px;
+      border-bottom: 1px solid #B8B2A7;
+    }
+
+    .visual-bars span {
+      display: block;
+      width: 10%;
+      height: var(--bar-height);
+      background: var(--sage);
+    }
+
+    .visual-bars span:nth-child(3n) {
+      background: var(--terracotta);
+    }
+
+    .visual-caption {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .project-visual.model-visual {
+      background: #E8EDE5;
+    }
+
+    .model-flow {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .model-flow span {
+      padding: 6px 8px;
+      border: 1px solid #B7C3B3;
+      background: #F6F3EC;
+      color: var(--ink);
+      font-family: var(--mono);
+      font-size: 10px;
+    }
+
+    .model-flow b {
+      color: var(--terracotta);
+      font-size: 15px;
+      font-weight: 400;
+    }
+
+    .project-visual.query-visual {
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    .query-visual .visual-label {
+      color: #D6DED5;
+    }
+
+    .query-visual .model-flow span {
+      border-color: #506056;
+      background: #2A3932;
+      color: #E0E8DD;
+    }
+
+    /* Education */
+
+    .education-layout {
+      display: grid;
+      grid-template-columns: 0.7fr 1.3fr;
+      gap: 50px;
+    }
+
+    .education-entry {
+      padding: 0 0 29px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .education-entry + .education-entry {
+      padding-top: 29px;
+    }
+
+    .education-entry .mono {
+      margin-bottom: 10px;
+      color: var(--terracotta);
+    }
+
+    .education-entry h3 {
+      margin-bottom: 7px;
+      font-family: var(--serif);
+      font-size: 28px;
+      line-height: 1.35;
+    }
+
+    .education-entry p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    /* Contact */
+
+    .contact-section {
+      padding-block: 105px 110px;
+      border-top: 1px solid var(--line);
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 0.7fr;
+      gap: 65px;
+      align-items: end;
+    }
+
+    .contact-title {
+      max-width: 650px;
+      margin-bottom: 25px;
+      font-family: var(--serif);
+      font-size: clamp(43px, 6vw, 76px);
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+    }
+
+    .contact-title em {
+      color: var(--terracotta);
+      font-weight: 400;
+    }
+
+    .contact-description {
+      max-width: 520px;
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .contact-details {
+      border-top: 1px solid var(--line);
+    }
+
+    .contact-item {
+      display: grid;
+      grid-template-columns: 95px 1fr;
+      gap: 15px;
+      padding-block: 17px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .contact-item .mono {
+      color: var(--muted);
+    }
+
+    .contact-item a {
+      overflow-wrap: anywhere;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration-thickness: 1px;
+    }
+
+    .contact-item a:hover {
+      color: var(--terracotta);
+    }
+
+    /* Footer */
+
+    .site-footer {
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-inner {
+      display: flex;
+      min-height: 86px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer-name {
+      color: var(--ink);
+      font-family: var(--serif);
+      font-size: 21px;
+    }
+
+    .footer-inner p {
+      margin: 0;
+    }
+
+    .back-top {
+      text-decoration: none;
+    }
+
+    .back-top:hover {
+      color: var(--terracotta);
+    }
+
+    /* Responsive layouts */
+
+    @media (min-width: 1440px) {
+      .hero {
+        min-height: 730px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        width: min(100% - 48px, var(--page-width));
+      }
+
+      .hero {
+        min-height: auto;
+        grid-template-columns: minmax(0, 1.1fr) minmax(235px, 0.9fr);
+        gap: 32px;
+        padding-block: 75px 85px;
+      }
+
+      .hero h1 {
+        font-size: clamp(52px, 7.5vw, 72px);
+      }
+
+      .section {
+        padding-block: 80px;
+      }
+
+      .section-heading,
+      .about-grid,
+      .skills-layout,
+      .education-layout {
+        gap: 30px;
+      }
+
+      .project {
+        gap: 30px;
+      }
+
+      .contact-layout {
+        gap: 35px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      html {
+        scroll-padding-top: 120px;
+      }
+
+      .container {
+        width: calc(100% - 40px);
+      }
+
+      .nav {
+        min-height: auto;
+        flex-wrap: wrap;
+        gap: 5px 16px;
+        padding-block: 13px 11px;
+      }
+
+      .wordmark {
+        font-size: 24px;
+      }
+
+      .nav-links {
+        width: 100%;
+        justify-content: space-between;
+        gap: 8px;
+        padding-top: 8px;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+      }
+
+      .nav-links .contact-link {
+        padding: 5px 9px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 44px;
+        padding-block: 66px 74px;
+      }
+
+      .hero h1 {
+        max-width: 500px;
+        font-size: clamp(54px, 13vw, 76px);
+      }
+
+      .hero-description {
+        font-size: 17px;
+      }
+
+      .query-panel {
+        width: calc(100% - 9px);
+        max-width: 460px;
+      }
+
+      .section {
+        padding-block: 70px;
+      }
+
+      .section-heading,
+      .about-grid,
+      .skills-layout,
+      .education-layout,
+      .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 23px;
+      }
+
+      .section-heading {
+        margin-bottom: 34px;
+      }
+
+      .section-intro {
+        margin-top: 0;
+        font-size: 16px;
+      }
+
+      h2 {
+        font-size: 43px;
+      }
+
+      .about-copy p:first-child {
+        font-size: 20px;
+      }
+
+      .experience-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding-block: 26px;
+      }
+
+      .experience-content h3 {
+        font-size: 27px;
+      }
+
+      .skill-group {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding-block: 21px;
+      }
+
+      .project,
+      .project:nth-child(even) {
+        grid-template-columns: 1fr;
+        gap: 21px;
+        padding-block: 31px;
+      }
+
+      .project h3 {
+        font-size: 32px;
+      }
+
+      .project-details {
+        align-self: start;
+      }
+
+      .contact-section {
+        padding-block: 75px;
+      }
+
+      .contact-title {
+        font-size: 52px;
+      }
+
+      .contact-layout {
+        gap: 36px;
+      }
+
+      .footer-inner {
+        min-height: 95px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 7px 15px;
+        padding-block: 19px;
+      }
+
+      .footer-inner p {
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: 390px) {
+      .container {
+        width: calc(100% - 32px);
+      }
+
+      .nav-links {
+        gap: 5px;
+      }
+
+      .nav-links a {
+        font-size: 11px;
+      }
+
+      .nav-links .contact-link {
+        padding: 4px 7px;
+      }
+
+      .hero h1 {
+        font-size: 51px;
+      }
+
+      .query-code {
+        padding-inline: 14px;
+        font-size: 11px;
+      }
+
+      .query-top {
+        padding-inline: 14px;
+      }
+
+      .query-result {
+        margin-inline: 14px;
+      }
+
+      .contact-item {
+        grid-template-columns: 78px 1fr;
+        gap: 10px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body id="top">
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="wordmark" href="#top" aria-label="Sara Abdulla home">
+        sara<span>.</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#work">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a class="contact-link" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="hero-kicker">Data Science · Business Analytics · Bahrain</p>
+
+        <div class="availability">Open to professional opportunities</div>
+
+        <h1 id="hero-title">
+          Finding the
+          <span class="accent">story</span>
+          inside the data.
+        </h1>
+
+        <p class="hero-description">
+          I'm Sara Abdulla, a Data Science and Business Analytics graduate
+          interested in using statistics, machine learning, and analytical
+          thinking to solve practical business problems.
+        </p>
+
+        <a class="button" href="#work">
+          Explore my work <span class="arrow" aria-hidden="true">↘</span>
+        </a>
+
+        <p class="hero-note">
+          Analytical by nature. Curious by design.
+        </p>
+      </div>
+
+      <aside class="query-panel" aria-label="SQL-inspired personal statement">
+        <div class="query-top">
+          <span>about_sara.sql</span>
+          <div class="query-dots" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+
+        <div class="query-code">
+          <div><span class="keyword">SELECT</span></div>
+          <div class="indent"><span class="field">curiosity</span>,</div>
+          <div class="indent"><span class="field">analytical_thinking</span>,</div>
+          <div class="indent"><span class="field">business_context</span></div>
+          <div><span class="keyword">FROM</span> <span class="field">my_work</span></div>
+          <div><span class="keyword">WHERE</span></div>
+          <div class="indent"><span class="field">problem</span> = <span class="value">'real'</span></div>
+          <div><span class="keyword">AND</span> <span class="field">goal</span> = <span class="value">'insight'</span>;</div>
+          <br>
+          <div class="comment">-- Look beyond the numbers.</div>
+          <div class="comment">-- Understand what they mean.</div>
+        </div>
+
+        <div class="query-result">
+          <strong>Query objective</strong>
+          Turn data into a clearer way forward.
+        </div>
+      </aside>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div>
+          <p class="eyebrow">A little about me</p>
+          <h2 id="about-title">Numbers are only the beginning.</h2>
+        </div>
+
+        <div class="about-copy">
+          <p>
+            I combine a foundation in data science with an interest in how
+            businesses operate, make decisions, and understand their customers.
+          </p>
+
+          <p>
+            Through my degree in Data Science and Business Analytics, I've
+            worked with statistical methods, predictive modelling, data
+            visualisation, and machine learning. I enjoy taking a problem
+            from its initial question through data preparation and analysis
+            to a result that can be understood and used.
+          </p>
+
+          <p>
+            Outside analytical work, I co-run a handmade crochet business,
+            @fluffy.bh, where I work across content, marketing, product
+            development, and operations. That experience gives me another
+            perspective on customers, practical decisions, and the realities
+            of running a business.
+          </p>
+
+          <div class="about-note">
+            <span class="about-note-mark" aria-hidden="true">∴</span>
+            <p>
+              My approach: understand the problem first, choose the right
+              method, and make the findings meaningful.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Beyond the classroom</p>
+            <h2 id="experience-title">Experience</h2>
+          </div>
+
+          <p class="section-intro">
+            Running a small business has given me a practical perspective
+            on customers, product decisions, marketing, and operations.
+          </p>
+        </div>
+
+        <article class="experience-row">
+          <div class="experience-meta">
+            <span class="mono">2023 — PRESENT</span>
+            <span>Entrepreneurship</span>
+          </div>
+
+          <div class="experience-content">
+            <h3>Co-founder · @fluffy.bh</h3>
+            <p>
+              Co-run a handmade crochet business with a focus on amigurumi,
+              plush creations, and customised products. My responsibilities
+              span content creation, marketing, product development,
+              customer engagement, and operations.
+            </p>
+            <p>
+              The experience has involved developing products, preparing for
+              markets, and working through practical fulfilment and shipping
+              challenges.
+            </p>
+
+            <div class="experience-focus" aria-label="Areas of responsibility">
+              <span>Content & marketing</span>
+              <span>Product development</span>
+              <span>Customer engagement</span>
+              <span>Operations</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container skills-layout">
+        <div>
+          <p class="eyebrow">My toolkit</p>
+          <h2 id="skills-title">Skills with purpose.</h2>
+          <p class="section-intro">
+            Methods and tools I use to explore data, build models, and
+            communicate analytical findings.
+          </p>
+        </div>
+
+        <div class="skills-groups">
+          <div class="skill-group">
+            <h3>Programming</h3>
+            <p>Python, R, SQL</p>
+          </div>
+
+          <div class="skill-group">
+            <h3>Statistical analysis</h3>
+            <p>
+              Regression, hypothesis testing, ANOVA, PCA, clustering,
+              statistical inference
+            </p>
+          </div>
+
+          <div class="skill-group">
+            <h3>Machine learning</h3>
+            <p>
+              Logistic regression, random forests, XGBoost, K-means,
+              classification, predictive modelling
+            </p>
+          </div>
+
+          <div class="skill-group">
+            <h3>Visualisation</h3>
+            <p>
+              Tableau, Power BI, ggplot2, Matplotlib, Seaborn
+            </p>
+          </div>
+
+          <div class="skill-group">
+            <h3>Tools & workflow</h3>
+            <p>
+              Excel, IBM SPSS, Jupyter Notebook, RStudio, Git,
+              pandas, Streamlit
+            </p>
+          </div>
+
+          <div class="skill-group">
+            <h3>Business analysis</h3>
+            <p>
+              Customer behaviour analysis, sales performance analysis,
+              exploratory data analysis, insight development
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Selected work</p>
+            <h2 id="work-title">Questions worth investigating.</h2>
+          </div>
+
+          <p class="section-intro">
+            A selection of projects spanning predictive modelling,
+            customer behaviour, operational performance, and practical
+            Python applications.
+          </p>
+        </div>
+
+        <div class="projects-list">
+          <article class="project">
+            <div class="project-aside">
+              <span class="project-type">Computer vision · Regression</span>
+              <h3>Age Prediction from Facial Images</h3>
+              <p class="project-summary">
+                Using image data to explore age prediction with a
+                machine-learning approach.
+              </p>
+            </div>
+
+            <div class="project-details">
+              <div class="project-visual model-visual" aria-hidden="true">
+                <div>
+                  <div class="visual-label">Image modelling workflow</div>
+                  <div class="model-flow">
+                    <span>Facial image</span>
+                    <b>→</b>
+                    <span>TensorFlow</span>
+                    <b>→</b>
+                    <span>Age estimate</span>
+                  </div>
+                </div>
+              </div>
+
+              <p>
+                This project explores how facial images can be used to
+                estimate age. The workflow involves preparing an image
+                dataset, organising training and testing data, and
+                developing a neural-network approach to predict a
+                continuous numerical target.
+              </p>
+
+              <p>
+                The focus is on understanding image inputs, preprocessing,
+                model training, and comparing predicted ages with actual
+                ages.
+              </p>
+
+              <span class="tool-label">Tools & methods</span>
+              <div class="tool-list">
+                Python · TensorFlow · Keras · Neural networks · Image preprocessing
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-aside">
+              <span class="project-type">Machine learning · Sustainability</span>
+              <h3>AI & Water Waste</h3>
+              <p class="project-summary">
+                Applying machine learning to investigate patterns
+                associated with high-risk water use.
+              </p>
+            </div>
+
+            <div class="project-details">
+              <div class="project-visual model-visual" aria-hidden="true">
+                <div>
+                  <div class="visual-label">Modelling approach</div>
+                  <div class="model-flow">
+                    <span>Water-use data</span>
+                    <b>→</b>
+                    <span>9 ML models</span>
+                    <b>→</b>
+                    <span>Risk patterns</span>
+                  </div>
+                </div>
+              </div>
+
+              <p>
+                This project uses machine learning to identify patterns
+                associated with high-risk water-use behaviour. I worked
+                with nine machine-learning models to investigate how
+                predictive techniques could support the identification
+                of potential water-waste risks.
+              </p>
+
+              <p>
+                The project brings together predictive modelling and
+                sustainability, exploring how data analysis can help
+                investigate a practical resource-management problem.
+              </p>
+
+              <span class="tool-label">Tools & methods</span>
+              <div class="tool-list">
+                Python · Machine learning · Predictive modelling
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-aside">
+              <span class="project-type">Business intelligence · Customer analytics</span>
+              <h3>Analysing Customer Behaviour</h3>
+              <p class="project-summary">
+                Exploring purchasing patterns and presenting findings
+                through an interactive Tableau story.
+              </p>
+            </div>
+
+            <div class="project-details">
+              <div class="project-visual" aria-hidden="true">
+                <div>
+                  <div class="visual-label">Visual analysis · Illustrative layout</div>
+                  <div class="visual-bars">
+                    <span style="--bar-height: 38%"></span>
+                    <span style="--bar-height: 68%"></span>
+                    <span style="--bar-height: 48%"></span>
+                    <span style="--bar-height: 86%"></span>
+                    <span style="--bar-height: 60%"></span>
+                    <span style="--bar-height: 100%"></span>
+                    <span style="--bar-height: 73%"></span>
+                  </div>
+                  <div class="visual-caption">
+                    Exploring patterns · Comparing behaviour · Communicating findings
+                  </div>
+                </div>
+              </div>
+
+              <p>
+                This project investigates customer purchasing behaviour
+                through data analysis and visualisation. I developed a
+                five-dashboard Tableau story and incorporated market
+                basket analysis to explore relationships between
+                purchasing patterns.
+              </p>
+
+              <p>
+                The emphasis is on presenting analytical findings in a
+                visual format that supports the exploration of customer
+                behaviour and business questions.
+              </p>
+
+              <span class="tool-label">Tools & methods</span>
+              <div class="tool-list">
+                Tableau · Customer analytics · Market basket analysis
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-aside">
+              <span class="project-type">Business analytics · Operations</span>
+              <h3>Olist Sales & Delivery Analysis</h3>
+              <p class="project-summary">
+                Analysing e-commerce performance and exploring delivery-time
+                prediction for operational decision-making.
+              </p>
+            </div>
+
+            <div class="project-details">
+              <div class="project-visual query-visual" aria-hidden="true">
+                <div>
+                  <div class="visual-label">From transaction to delivery insight</div>
+                  <div class="model-flow">
+                    <span>Orders</span>
+                    <b>→</b>
+                    <span>Features</span>
+                    <b>→</b>
+                    <span>Delivery estimate</span>
+                  </div>
+                </div>
+              </div>
+
+              <p>
+                Using Brazilian e-commerce data, this project examines
+                sales performance and the factors associated with delivery
+                time. The analysis considers order information, product
+                characteristics, freight costs, and customer and seller
+                locations.
+              </p>
+
+              <p>
+                The modelling work focuses on predicting delivery time
+                in days, with the business goal of supporting more
+                informed delivery estimates and operational planning.
+              </p>
+
+              <span class="tool-label">Tools & methods</span>
+              <div class="tool-list">
+                Python · pandas · Data cleaning · Feature engineering · Machine learning
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-aside">
+              <span class="project-type">Python · Application development</span>
+              <h3>Digital Medication Tracker</h3>
+              <p class="project-summary">
+                A practical application for organising medication
+                information and personal health logs.
+              </p>
+            </div>
+
+            <div class="project-details">
+              <div class="project-visual model-visual" aria-hidden="true">
+                <div>
+                  <div class="visual-label">Application workflow</div>
+                  <div class="model-flow">
+                    <span>Add records</span>
+                    <b>→</b>
+                    <span>Track details</span>
+                    <b>→</b>
+                    <span>Review logs</span>
+                  </div>
+                </div>
+              </div>
+
+              <p>
+                I developed a Python application for storing, retrieving,
+                and managing medication information and personal health
+                logs. The tracker is designed around practical tasks
+                such as adding medication records, searching information,
+                and viewing saved entries.
+              </p>
+
+              <p>
+                The project explores how a simple data-backed application
+                can organise information into a more accessible workflow.
+              </p>
+
+              <span class="tool-label">Tools & methods</span>
+              <div class="tool-list">
+                Python · pandas · CSV data storage · Streamlit
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-aside">
+              <span class="project-type">Exploratory data analysis</span>
+              <h3>Flight Delays Analysis</h3>
+              <p class="project-summary">
+                Exploring flight-delay data to investigate operational
+                patterns and potential sources of delay.
+              </p>
+            </div>
+
+            <div class="project-details">
+              <p>
+                This analytical project examines flight-delay data to
+                explore patterns in operational performance. It provides
+                an opportunity to apply exploratory data analysis and
+                statistical reasoning to a practical transportation problem.
+              </p>
+
+              <span class="tool-label">Tools & methods</span>
+              <div class="tool-list">
+                Data analysis · Exploratory analysis · Statistical reasoning
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="education" aria-labelledby="education-title">
+      <div class="container education-layout">
+        <div>
+          <p class="eyebrow">Academic foundation</p>
+          <h2 id="education-title">Education</h2>
+        </div>
+
+        <div>
+          <article class="education-entry">
+            <p class="mono">BACHELOR'S DEGREE</p>
+            <h3>BSc Data Science and Business Analytics</h3>
+            <p>
+              BIBF · University of London programme
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-layout">
+        <div>
+          <p class="eyebrow">Let's connect</p>
+          <h2 class="contact-title" id="contact-title">
+            Good questions lead to <em>better insights.</em>
+          </h2>
+          <p class="contact-description">
+            I'm interested in opportunities where analytical thinking,
+            data, and business understanding come together. Get in touch
+            to discuss a role, project, or professional opportunity.
+          </p>
+        </div>
+
+        <div class="contact-details">
+          <div class="contact-item">
+            <span class="mono">EMAIL</span>
+            <a href="mailto:saradhaif0@gmail.com">
+              saradhaif0@gmail.com
+            </a>
+          </div>
+
+          <div class="contact-item">
+            <span class="mono">PHONE</span>
+            <a href="tel:+97338406640">
+              +973 3840 6640
+            </a>
+          </div>
+
+          <div class="contact-item">
+            <span class="mono">LOCATION</span>
+            <span>Bahrain</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="footer-name">Sara Abdulla.</span>
+      <p>Data science, business thinking, and continuous learning.</p>
+      <p>© <span id="current-year">2026</span> Sara Abdulla</p>
+      <a class="back-top" href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    // Keep the copyright year current.
+    document.getElementById("current-year").textContent =
+      new Date().getFullYear();
+
+    // Allow the navigation to close over the target section naturally.
+    // Native anchor links retain keyboard and no-JavaScript accessibility.
+    document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+      link.addEventListener("click", function (event) {
+        var targetId = link.getAttribute("href");
+
+        if (targetId === "#") {
+          return;
+        }
+
+        var target = document.querySelector(targetId);
+
+        if (target) {
+          event.preventDefault();
+          target.scrollIntoView({
+            behavior: window.matchMedia(
+              "(prefers-reduced-motion: reduce)"
+            ).matches ? "auto" : "smooth",
+            block: "start"
+          });
+
+          history.replaceState(null, "", targetId);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
