@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#F6F3EC">
 
-  <title>Sara Abdulla | Data Science & Business Analytics</title>
-  <meta name="description" content="Sara Abdulla's portfolio in data science, business analytics, machine learning, and data-driven problem solving.">
-  <meta property="og:title" content="Sara Abdulla | Data Science & Business Analytics">
+  <title>Sara Dhaief | Data Science & Business Analytics</title>
+  <meta name="description" content="Sara Dhaief's portfolio in data science, business analytics, machine learning, and data-driven problem solving.">
+  <meta property="og:title" content="Sara Dhaief | Data Science & Business Analytics">
   <meta property="og:description" content="Exploring data, building models, and turning analysis into business insight.">
   <meta property="og:type" content="website">
 
@@ -508,6 +508,69 @@
       font-size: 12px;
     }
 
+
+    /* Youth City photo story */
+    .youth-city-story {
+      margin-top: 42px; padding: 30px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.42);
+    }
+    .youth-city-heading {
+      display: flex; align-items: end; justify-content: space-between;
+      gap: 24px; margin-bottom: 25px;
+    }
+    .youth-city-heading h3 {
+      margin: 0; font-family: var(--serif);
+      font-size: clamp(27px, 3vw, 36px); line-height: 1.2;
+    }
+    .youth-city-heading p {
+      max-width: 440px; margin: 0;
+      color: var(--muted); font-size: 14px;
+    }
+    .youth-gallery {
+      display: grid; grid-template-columns: 1.15fr 0.85fr;
+      gap: 18px; align-items: stretch;
+    }
+    .youth-photo {
+      min-width: 0; margin: 0; overflow: hidden;
+      border: 1px solid var(--line); background: var(--white);
+    }
+    .youth-photo img {
+      width: 100%; height: 100%; min-height: 250px;
+      max-height: 390px; object-fit: cover;
+      transition: transform 350ms ease;
+    }
+    .youth-photo:hover img { transform: scale(1.035); }
+    .youth-photo figcaption {
+      padding: 16px 17px 18px; color: var(--muted);
+      font-size: 14px; line-height: 1.7;
+    }
+    .youth-photo figcaption strong {
+      display: block; margin-bottom: 5px; color: var(--ink);
+      font-family: var(--serif); font-size: 20px; font-weight: 400;
+    }
+    .youth-photo-wide {
+      grid-column: 1 / -1;
+      display: grid; grid-template-columns: 1fr 0.8fr;
+      align-items: stretch;
+    }
+    .youth-photo-wide img { height: 300px; max-height: none; }
+    .youth-photo-wide figcaption {
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 25px;
+    }
+    .youth-github {
+      display: inline-flex; align-items: center; gap: 12px;
+      margin-top: 24px; padding: 12px 17px;
+      border: 1px solid var(--ink); color: var(--ink);
+      font-size: 14px; font-weight: 600; text-decoration: none;
+      transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+    }
+    .youth-github:hover {
+      transform: translateY(-2px); background: var(--ink); color: var(--paper);
+    }
+    .youth-github span { font-size: 18px; }
+
     /* Skills */
 
     .skills-layout {
@@ -910,6 +973,20 @@
         padding: 5px 9px;
       }
 
+
+      .youth-city-story { margin-top: 30px; padding: 18px; }
+      .youth-city-heading {
+        align-items: start; flex-direction: column; gap: 9px;
+      }
+      .youth-gallery { grid-template-columns: 1fr; }
+      .youth-photo-wide {
+        grid-column: auto; grid-template-columns: 1fr;
+      }
+      .youth-photo img, .youth-photo-wide img {
+        height: auto; min-height: 0; max-height: 420px;
+        aspect-ratio: 4 / 3;
+      }
+
       .hero {
         grid-template-columns: 1fr;
         gap: 44px;
@@ -1066,19 +1143,6 @@
         transition-duration: 0.01ms !important;
       }
     }
-
-    /* Portfolio additions */
-    .project-links { display:flex; flex-wrap:wrap; gap:10px; margin-top:20px; }
-    .project-links a { display:inline-block; padding:9px 15px; border:1px solid var(--ink); text-decoration:none; font-size:13px; font-weight:600; transition:background 180ms,color 180ms; }
-    .project-links a:hover { background:var(--ink); color:var(--paper); }
-    .market-gallery { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin-top:22px; }
-    .market-gallery figure { margin:0; }
-    .market-gallery img { width:100%; aspect-ratio:4/3; object-fit:cover; border:1px solid var(--line); }
-    .market-gallery figcaption { margin-top:7px; color:var(--muted); font-size:12px; }
-    .market-gallery-featured { grid-template-columns:1fr; max-width:780px; }
-    .market-gallery-featured img { aspect-ratio: 1.5; object-fit:contain; background:#eee; }
-    .market-gallery-note { color:var(--muted); font-size:13px; margin-top:12px; }
-    @media(max-width:650px) { .market-gallery { grid-template-columns:1fr; } }
   </style>
 </head>
 
@@ -1213,20 +1277,6 @@
 
         <article class="experience-row">
           <div class="experience-meta">
-            <span class="mono">DATA SCIENCE BOOTCAMP</span>
-            <span>General Assembly (GA)</span>
-          </div>
-          <div class="experience-content">
-            <h3>Data Science Bootcamp · General Assembly</h3>
-            <p>Developing practical data science skills through hands-on projects, including data preparation, exploratory analysis, machine learning, model evaluation, and presenting results.</p>
-            <div class="experience-focus" aria-label="Bootcamp focus areas">
-              <span>Python</span><span>Data analysis</span><span>Machine learning</span><span>Applied projects</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="experience-row">
-          <div class="experience-meta">
             <span class="mono">2023 — PRESENT</span>
             <span>Entrepreneurship</span>
           </div>
@@ -1245,12 +1295,6 @@
               challenges.
             </p>
 
-            <h3>Youth City Market · Business Participant</h3>
-            <p>Participated in Youth City Market with @fluffy.bh, showcasing handmade crochet products and connecting with customers in person.</p>
-            <div class="market-gallery market-gallery-featured" aria-label="Youth City Market photo">
-              <figure><img src="images/IMG_3385.jpg" alt="Fluffy BH crochet stall during a Bahrain News Agency interview at Youth City Market" loading="lazy"><figcaption>@fluffy.bh at Youth City Market · Bahrain News Agency coverage</figcaption></figure>
-            </div>
-
             <div class="experience-focus" aria-label="Areas of responsibility">
               <span>Content & marketing</span>
               <span>Product development</span>
@@ -1259,6 +1303,59 @@
             </div>
           </div>
         </article>
+
+        <div class="youth-city-story" aria-labelledby="youth-city-title">
+          <div class="youth-city-heading">
+            <div>
+              <p class="eyebrow">A market experience · August 2026</p>
+              <h3 id="youth-city-title">Youth City 2030</h3>
+            </div>
+            <p>
+              Representing @fluffy.bh at the Youth City market — sharing
+              handmade crochet pieces, meeting visitors, and introducing
+              the story behind the small business.
+            </p>
+          </div>
+
+          <div class="youth-gallery">
+            <figure class="youth-photo youth-photo-wide">
+              <img src="images/youth-city-media-interview.jpg"
+                   alt="Sara speaking with a Bahrain News Agency reporter at the fluffy.bh booth">
+              <figcaption>
+                <strong>Featured by Bahrain News Agency</strong>
+                A media interview at the market, sharing the story of
+                @fluffy.bh and the handmade crochet work behind the brand.
+              </figcaption>
+            </figure>
+
+            <figure class="youth-photo">
+              <img src="images/youth-city-fluffy-booth.jpg"
+                   alt="The fluffy.bh market booth displaying handmade crochet plushies">
+              <figcaption>
+                <strong>The fluffy.bh booth</strong>
+                A closer look at the market display, featuring handmade
+                crochet plushies and small creations arranged for visitors
+                to browse.
+              </figcaption>
+            </figure>
+
+            <figure class="youth-photo">
+              <img src="images/youth-city-guest-visit.jpg"
+                   alt="A guest visiting the fluffy.bh booth during Youth City 2030">
+              <figcaption>
+                <strong>A guest visit</strong>
+                Welcoming a visitor to the booth and introducing the
+                handmade collection during the Youth City market.
+              </figcaption>
+            </figure>
+          </div>
+
+          <a class="youth-github"
+             href="https://github.com/saradhaif/saradhaif.github.io/tree/main"
+             target="_blank" rel="noopener noreferrer">
+            Browse the GitHub project folder <span aria-hidden="true">↗</span>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -1379,7 +1476,6 @@
               <div class="tool-list">
                 Python · TensorFlow · Keras · Neural networks · Image preprocessing
               </div>
-            <div class="project-links" aria-label="Project resources"><a href="https://github.com/saradhaif?tab=repositories" target="_blank" rel="noopener noreferrer">Browse my GitHub projects ↗</a></div>
             </div>
           </article>
 
@@ -1425,7 +1521,6 @@
               <div class="tool-list">
                 Python · Machine learning · Predictive modelling
               </div>
-            <div class="project-links" aria-label="Project resources"><a href="https://github.com/saradhaif?tab=repositories" target="_blank" rel="noopener noreferrer">Browse my GitHub projects ↗</a></div>
             </div>
           </article>
 
@@ -1476,7 +1571,6 @@
               <div class="tool-list">
                 Tableau · Customer analytics · Market basket analysis
               </div>
-            <div class="project-links" aria-label="Project resources"><a href="https://github.com/saradhaif?tab=repositories" target="_blank" rel="noopener noreferrer">Browse my GitHub projects ↗</a></div>
             </div>
           </article>
 
@@ -1522,7 +1616,6 @@
               <div class="tool-list">
                 Python · pandas · Data cleaning · Feature engineering · Machine learning
               </div>
-            <div class="project-links" aria-label="Project resources"><a href="https://github.com/saradhaif?tab=repositories" target="_blank" rel="noopener noreferrer">Browse my GitHub projects ↗</a></div>
             </div>
           </article>
 
@@ -1567,8 +1660,6 @@
               <div class="tool-list">
                 Python · pandas · CSV data storage · Streamlit
               </div>
-              <div class="project-links"><a href="https://github.com/saradhaif/Medication_Tracker" target="_blank" rel="noopener noreferrer">View project code ↗</a></div>
-            <div class="project-links" aria-label="Project resources"><a href="https://github.com/saradhaif?tab=repositories" target="_blank" rel="noopener noreferrer">Browse my GitHub projects ↗</a></div>
             </div>
           </article>
 
@@ -1594,19 +1685,6 @@
               <div class="tool-list">
                 Data analysis · Exploratory analysis · Statistical reasoning
               </div>
-            <div class="project-links" aria-label="Project resources"><a href="https://github.com/saradhaif?tab=repositories" target="_blank" rel="noopener noreferrer">Browse my GitHub projects ↗</a></div>
-            </div>
-          </article>
-          <article class="project">
-            <div class="project-aside">
-              <span class="project-type">Data science · Jupyter Notebook</span>
-              <h3>Passenger Satisfaction</h3>
-              <p class="project-summary">A data science project exploring passenger satisfaction.</p>
-            </div>
-            <div class="project-details">
-              <p>Explore the project notebook and supporting materials on GitHub.</p>
-              <span class="tool-label">Project resources</span>
-              <div class="project-links"><a href="https://github.com/saradhaif/passenger-satisfaction" target="_blank" rel="noopener noreferrer">View repository ↗</a></div>
             </div>
           </article>
         </div>
@@ -1661,7 +1739,6 @@
             </a>
           </div>
 
-          <div class="contact-item"><span class="mono">GITHUB</span><a href="https://github.com/saradhaif" target="_blank" rel="noopener noreferrer">github.com/saradhaif</a></div>
           <div class="contact-item">
             <span class="mono">LOCATION</span>
             <span>Bahrain</span>
